@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: all 400ms;
 }
 
 body {
@@ -28,10 +29,90 @@ img {
   width: 100%;
 }
 
+.btn {
+  background-color: transparent;
+  color: var(--color-white);
+  padding: 1em 2em;
+  border: 1px solid var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
 .container {
   max-width: 1120px;
   margin: auto;
 }
+
+/* header */
+
+/* top bar */
+
+.top_bar {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: clamp(0.9375rem, 0.8482rem + 0.4464vw, 1.25rem);
+  text-align: center;
+  padding: 0.4em 0;
+  font-weight: 600;
+}
+
+.announce a {
+  color: var(--color-secondary);
+}
+
+header {
+  background-color: #000000;
+}
+
+.main_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3em 0;
+}
+
+.menu_list {
+  display: flex;
+  list-style-type: none;
+  gap: 1.5em;
+}
+
+.menu_item {
+}
+
+.menu_link {
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  padding: 0.5em;
+}
+
+.menu_link:hover {
+  color: var(--color-primary);
+}
+
+.sign-up {
+  background-color: var(--color-primary);
+  border: none;
+  font-size: 0.9em;
+  padding: 1.3em 1.7em;
+}
+
+.sign-up:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.mobil_bar {
+  font-size: 1.5em;
+  color: var(--color-white);
+  display: none;
+}
+
+/* ------ */
 
 .section_hero {
   background-image: linear-gradient(0deg, #191920, #302f3d);
@@ -70,26 +151,27 @@ img {
   margin-top: 3em;
 }
 
-.btn {
-  background-color: transparent;
-  color: var(--color-white);
-  padding: 1em 2em;
-  border: 1px solid var(--color-white);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-
 .btn i {
   margin-right: 0.5em;
 }
 
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1.2em;
+  }
+
+  .menu_list {
+    display: none;
+  }
+
+  .mobil_bar {
+    display: block;
+  }
+
   .hero_wrapper {
     grid-template-columns: 1fr;
-    padding: 0 1em;
   }
 
   .hero_image {
