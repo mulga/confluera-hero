@@ -59,6 +59,7 @@ img {
 
 .announce a {
   color: var(--color-secondary);
+  text-decoration: underline;
 }
 
 header {
@@ -112,7 +113,7 @@ header {
   display: none;
 }
 
-/* ------ */
+/* -- section hero -- */
 
 .section_hero {
   background-image: linear-gradient(0deg, #191920, #302f3d);
@@ -125,7 +126,7 @@ header {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3em;
+  gap: 5em;
 }
 
 .hero_content > * {
@@ -155,7 +156,77 @@ header {
   margin-right: 0.5em;
 }
 
-/* Responsive */
+/* section value */
+
+.section_value {
+  background-color: #302f3d;
+  padding: 5em 0;
+}
+
+.section_title {
+  font-size: 1.5em;
+  color: var(--color-white);
+  margin-bottom: 0.6em;
+}
+
+.client_logo {
+  width: 250px;
+}
+
+.hero_video_text {
+  max-width: 90%;
+}
+
+.client_name {
+  font-size: 1.1em;
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+.client_position {
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+
+/* section_intercept */
+
+.section_intercept {
+  background-color: #000000;
+  padding: 3em 0;
+}
+
+.feature_box_wrapper {
+  gap: 1em;
+}
+
+.feature_box {
+  border: 1px solid #8b8b8b;
+  padding: 2em;
+}
+
+.title_small {
+  font-size: 20px;
+  color: var(--color-primary);
+  margin-bottom: 0.5em;
+}
+
+.text_small {
+  font-size: 16px;
+  font-weight: 200;
+  initial-letter: 1px;
+}
+
+.feature_box_button {
+  display: flex;
+  margin: 0;
+}
+
+.feature_box_button a {
+  margin-left: auto;
+}
+
+/* ----- Responsive ----- */
 
 @media (max-width: 992px) {
   .container {
@@ -172,9 +243,35 @@ header {
 
   .hero_wrapper {
     grid-template-columns: 1fr;
+    gap: 2em;
   }
 
   .hero_image {
     display: none;
+  }
+
+  /* section value */
+
+  .hero_video {
+    display: block;
+    width: 100%;
+  }
+
+  iframe {
+    aspect-ratio: 16/9;
+  }
+
+  .hero_video_content {
+    padding-left: 2em;
+  }
+
+  .hero_video_text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .feature_box_button {
+    display: inline-block;
   }
 }
