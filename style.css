@@ -106,7 +106,7 @@ header {
   color: var(--color-primary);
 }
 
-.mobil_bar {
+#mobile_bar {
   font-size: 1.5em;
   color: var(--color-white);
   display: none;
@@ -166,8 +166,8 @@ header {
     display: none;
   }
 
-  .mobil_bar {
-    display: block;
+  #mobile_bar {
+    display: flex;
   }
 
   .hero_wrapper {
